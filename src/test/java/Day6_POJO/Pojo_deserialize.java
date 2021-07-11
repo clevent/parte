@@ -10,6 +10,7 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.*;
 import static org.testng.Assert.*;
+
 public class Pojo_deserialize {
 
     @Test

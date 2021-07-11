@@ -1,5 +1,6 @@
 package apitests;
 
+import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.testng.annotations.BeforeClass;
@@ -19,8 +20,8 @@ public class hrApiWithJsonPath {
 
     @Test
     public void test1(){
-        Response response = get("/countries");
-
+        Response response = given().get("/countries");
+response.prettyPrint();
         //assign to jsonpath
         JsonPath jsonPath = response.jsonPath();
 
@@ -38,8 +39,7 @@ public class hrApiWithJsonPath {
 
     @Test
     public void test2(){
-        Response response = given().queryParam("limit",107)
-                            .when().get("/employees");
+        Response response = RestAssured.get("/employees");
 
         JsonPath jsonPath = response.jsonPath();
 

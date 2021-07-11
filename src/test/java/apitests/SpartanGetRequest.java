@@ -75,7 +75,11 @@ public class SpartanGetRequest {
         Assert.assertEquals(response.getBody().asString(),"Hello from Sparta");
     }
 
+    @Test
+    public void test3(){
 
+
+    }
 
 
 

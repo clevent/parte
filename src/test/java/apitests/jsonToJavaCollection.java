@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import utilities.ConfigurationReader;
 
+import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
@@ -83,6 +84,9 @@ public class jsonToJavaCollection {
 
         //print first region name
         System.out.println(itemsList.get(0).get("region_name"));
+
+        String[] list={"ali","ahmet"};
+
 
 
     }
